@@ -1,20 +1,4 @@
-import React from 'react'
-import CounterContext from '../context/counter'
+import { createContext } from 'react';
 
-const Counter = () => (
-  <CounterContext.Consumer>
-    {
-      ({ count, increment, decrement }) => {
-        return (
-          <React.Fragment>
-            <div>count: {count}</div>
-            <button onClick={increment}>+1</button>
-            <button onClick={decrement}>-1</button>
-          </React.Fragment>
-        )
-      }
-    }
-  </CounterContext.Consumer>
-)
-
-export default Counter
+const CounterContext = createContext()
+export default CounterContext
